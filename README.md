@@ -26,17 +26,17 @@ The following example assumes a [binary installation of Gazebo Garden on Ubuntu]
 gz sim -v 4 shapes.sdf
 ```
 
-1. Run the websocket server
+2. Run the websocket server
 ```
 gz launch -v 4 /usr/local/share/gz/gz-launch6/configs/websocket.gzlaunch
 ```
 
-1. Run this web server
+3. Run this web server
 ```
 ng serve
 ```
 
-1. Navigate to http://localhost:4200 and click "Connect"
+4. Navigate to http://localhost:4200 and click "Connect"
 ```
 firefox http://localhost:4200
 ```
