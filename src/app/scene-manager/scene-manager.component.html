@@ -1,0 +1,32 @@
+<section>
+  <mat-form-field appearance="outline">
+    <input matInput [(ngModel)]="wsUrl" placeholder="Websocket URL">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <input matInput [(ngModel)]="authKey" placeholder="Authorization Key">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="connect()" *ngIf="!sceneManager || (sceneManager.getConnectionStatusAsObservable() | async) === false">
+    Connect
+  </button>
+
+  <button mat-raised-button color="primary" (click)="disconnect()" *ngIf="sceneManager && (sceneManager.getConnectionStatusAsObservable() | async) === true">
+    Disconnect
+  </button>
+
+  <button mat-raised-button color="primary" (click)="fog()" *ngIf="sceneManager && (sceneManager.getConnectionStatusAsObservable() | async) === true">
+    Add Fog
+  </button>
+
+  <button mat-raised-button color="primary" (click)="snapshot()" *ngIf="sceneManager && (sceneManager.getConnectionStatusAsObservable() | async) === true">
+    Take snapshot
+  </button>
+
+  <button mat-raised-button color="primary" (click)="resetView()" *ngIf="sceneManager && (sceneManager.getConnectionStatusAsObservable() | async) === true">
+    Reset View
+  </button>
+</section>
+
+<div id="container" (window:resize)="resize()">
+</div>

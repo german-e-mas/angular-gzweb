@@ -1,0 +1,18 @@
+section {
+  margin: 1em;
+  position: absolute;
+  top: 10em;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 20em;
+
+  button {
+    align-self: flex-start;
+  }
+}
+
+#container {
+  height: 100%;
+}
