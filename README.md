@@ -1,27 +1,27 @@
-# AngularGzweb
+# Angular Gzweb
+
+This is a sample Angular application that uses [Gzweb](https://github.com/gazebo-web/gzweb/tree/gzweb2).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
 
+Then, `gzweb` was installed by doing `npm install gzweb`.
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` or `npm start` for a dev server. Navigate to `http://localhost:4200/`.
 
-## Code scaffolding
+## Asset Viewer
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This is used to view a single Model or World. Note that this requires you to input all the related URLs you will need. You can get these files from the [Gazebo App](https://app.gazebosim.org/) (which uses Gzweb as well!).
 
-## Build
+## Scene Manager
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+This is used to connect to a live simulation. Make sure you are running one and launching a Websocket server before connecting.
 
-## Running unit tests
+```
+gz sim -v 4 path/to/world.sdf
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+gz launch -v 4 path/to/gz-launch/examples/websocket.gzlaunch -v 4
+```
