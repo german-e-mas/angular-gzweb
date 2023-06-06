@@ -16,7 +16,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"Angular.ng-template"
+				"Angular.ng-template",
+				"ms-vscode.vscode-typescript-next"
 			]
 		}
 	}
